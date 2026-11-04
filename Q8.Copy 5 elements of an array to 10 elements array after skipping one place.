@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int a[5], b[10];
+    int i, j = 0;
+
+    printf("Enter 5 values:\n");
+    for(i = 0; i < 5; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    // Copy after skipping one place
+    for(i = 0; i < 10; i++) {
+        if(i % 2 == 0) {
+            b[i] = a[j];
+            j++;
+        } else {
+            b[i] = 0; // Skipped place filled with 0
+        }
+    }
+
+    printf("New array of 10 elements is:\n");
+    for(i = 0; i < 10; i++) {
+        printf("%d ", b[i]);
+    }
+
+    return 0;
+}
