@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int arr[5];
+    int i, j, temp;
+
+    printf("Enter 5 values:\n");
+    for(i = 0; i < 5; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Sorting in Ascending Order - Bubble Sort
+    for(i = 0; i < 5; i++) {
+        for(j = i+1; j < 5; j++) {
+            if(arr[i] > arr[j]) {  // Change to < for Descending
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+
+    printf("Sorted in Ascending order:\n");
+    for(i = 0; i < 5; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    // For Descending just change condition to arr[i] < arr[j]
+
+    return 0;
+}
